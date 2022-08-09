@@ -16,4 +16,4 @@ This is a work in progress and will continue to grow.
 ##### Examples for each category
 
 * Recursion 
-..* Traverse an array with recursion
+  * Traverse an array with recursion
