@@ -13,7 +13,7 @@ ___author___ = "Neil Doherty"
 # Menu Selection options
 menu_options = {
     "recursion": {
-        "1": ["Array Recursion", start_array_recursion]
+        "1": ["Traverse and array with recursion", start_array_recursion]
     }
 }
 
