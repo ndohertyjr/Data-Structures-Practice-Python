@@ -7,13 +7,17 @@ understand what is happening in the code and why.
 """
 
 from Recursion.array_recursion import start_array_recursion
+from Recursion.num_chars_recursion import start_num_chars_recursion
+from Recursion.array_of_even_nums import start_array_of_even_nums
 
 ___author___ = "Neil Doherty"
 
 # Menu Selection options
 menu_options = {
     "recursion": {
-        "1": ["Traverse and array with recursion", start_array_recursion]
+        "1": ["Traverse and array with recursion", start_array_recursion],
+        "2": ["Number of characters in array of strings", start_num_chars_recursion],
+        "3": ["Build an array of even numbers", start_array_of_even_nums]
     }
 }
 
@@ -54,8 +58,8 @@ def message_selection():
             print("\nEnter the number of the example you want to see.  Type \"00\" to return to category selection")
             for example in menu_options[category_selection]:
                 print(example + ". " + menu_options[category_selection][example][0])
-                print("00. Return to category selection\n")
 
+            print("00. Return to category selection\n")
             example_selection = input("Example selection: ").strip()
 
             if str(example_selection) == "00":
