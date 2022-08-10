@@ -34,7 +34,7 @@ def input_strings(array):
                 return array
 
 
-def calculate_chars_in_array(array, index = 0):
+def calculate_chars_in_array(array):
     # base case to return length of final array value
     if len(array) == 1:
         return len(array[0])
@@ -44,19 +44,21 @@ def calculate_chars_in_array(array, index = 0):
 
 
 def start_num_chars_recursion():
-    print("Begin by entering strings to use in the array.  When finished, enter \"/run\" to being the function.")
+    finished = False
+    while not finished:
+        print("Begin by entering strings to use in the array.  When finished, enter \"/run\" to being the function.")
 
-    array = []
-    input_strings(array)
-    num_of_chars = calculate_chars_in_array(array)
+        array = []
+        input_strings(array)
+        num_of_chars = calculate_chars_in_array(array)
 
-    print("\nYour array is:")
-    print(array)
-    print("\nThe number of characters in the array is:\n%s\n" % num_of_chars)
+        print("\nYour array is:")
+        print(array)
+        print("\nThe number of characters in the array is:\n%s\n" % num_of_chars)
 
-    repeat = repeat_example()
+        repeat = repeat_example()
 
-    if repeat:
-        start_num_chars_recursion()
-    else:
-        return show_new_example()
+        if repeat:
+            continue
+        else:
+            return show_new_example()

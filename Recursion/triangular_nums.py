@@ -36,17 +36,19 @@ def calculate_triangular_num(index):
 
 
 def start_triangular_nums():
-    print("A triangular number sequence is where the next value in the sequence is\n"
-          "determined by the current index and the value of the number in the prior index.\n")
-    print("\nEnter an index and the program will print the triangular number\n"
-          "value based on the index you entered.\n")
-    index = get_user_input()
+    finished = False
+    while not finished:
+        print("A triangular number sequence is where the next value in the sequence is\n"
+              "determined by the current index and the value of the number in the prior index.\n")
+        print("\nEnter an index and the program will print the triangular number\n"
+              "value based on the index you entered.\n")
+        index = get_user_input()
 
-    print("The value at index %i is %i" % (index, calculate_triangular_num(index)))
+        print("The value at index %i is %i" % (index, calculate_triangular_num(index)))
 
-    repeat = repeat_example()
+        repeat = repeat_example()
 
-    if repeat:
-        start_triangular_nums()
-    else:
-        show_new_example()
+        if repeat:
+            continue
+        else:
+            return show_new_example()

@@ -38,12 +38,14 @@ def array_recursion(current_array):
             print(item)
 
 def start_array_recursion():
-    print("ARRAY RECURSION EXAMPLE:")
-    print("This example will show how the program can use recursion to traverse an array.\n")
-    array_recursion(array)
-    repeat = repeat_example()
+    finished = False
+    while not finished:
+        print("ARRAY RECURSION EXAMPLE:")
+        print("This example will show how the program can use recursion to traverse an array.\n")
+        array_recursion(array)
+        repeat = repeat_example()
 
-    if repeat:
-        start_array_recursion()
-    else:
-        return show_new_example()
+        if repeat:
+            continue
+        else:
+            return show_new_example()

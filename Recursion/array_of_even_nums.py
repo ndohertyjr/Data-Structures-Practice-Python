@@ -23,7 +23,6 @@ def validate_input(input):
 
     try:
         valid_int = int(input)
-        print(type(valid_int))
         if is_negative:
             valid_int = valid_int * -1
         return True, valid_int
@@ -70,18 +69,22 @@ def build_even_array(original_array, even_num_array):
 
 
 def start_array_of_even_nums():
-    print("This example will build a new array of only the even numbers in an existing array.")
-    print("Begin by entering digits to build the existing array.")
-    original_array = []
-    even_num_array = []
-    build_original_array(original_array)
-    build_even_array(original_array, even_num_array)
-    print(original_array)
-    print(even_num_array)
+    finished = False
+    while not finished:
+        print("This example will build a new array of only the even numbers in an existing array.")
+        print("Begin by entering digits to build the existing array.")
+        original_array = []
+        even_num_array = []
+        build_original_array(original_array)
+        build_even_array(original_array, even_num_array)
+        print("Your original array was:")
+        print(original_array)
+        print("Your array of the even numbers is:")
+        print(even_num_array)
 
-    repeat = repeat_example()
+        repeat = repeat_example()
 
-    if repeat:
-        start_array_of_even_nums()
-    else:
-        return show_new_example()
+        if repeat:
+            continue
+        else:
+            return show_new_example()

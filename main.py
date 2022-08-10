@@ -10,6 +10,8 @@ from Recursion.array_recursion import start_array_recursion
 from Recursion.num_chars_recursion import start_num_chars_recursion
 from Recursion.array_of_even_nums import start_array_of_even_nums
 from Recursion.triangular_nums import start_triangular_nums
+from Recursion.find_the_character import start_find_the_character
+from Recursion.shortest_paths import start_shortest_paths
 
 ___author___ = "Neil Doherty"
 
@@ -19,12 +21,11 @@ menu_options = {
         "1": ["Traverse and array with recursion", start_array_recursion],
         "2": ["Number of characters in array of strings", start_num_chars_recursion],
         "3": ["Build an array of even numbers", start_array_of_even_nums],
-        "4": ["Calculate triangular number based on index", start_triangular_nums]
+        "4": ["Calculate triangular number based on index", start_triangular_nums],
+        "5": ["Find the character in the string", start_find_the_character],
+        "6": ["Find number of shortest paths", start_shortest_paths]
     }
 }
-
-
-
 
 
 def welcome_menu():

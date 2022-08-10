@@ -6,7 +6,7 @@ ___author___ = "Neil Doherty"
 
 
 def show_new_example():
-    user_choice = input("Would you like to see another example? (Y/N) ").upper().strip()
+    user_choice = input("Would you like to see another example? (Y/N) \n").upper().strip()
 
     if user_choice == "Y" or user_choice == "N":
         if user_choice == "Y":
@@ -18,7 +18,7 @@ def show_new_example():
         show_new_example()
 
 def repeat_example():
-    repeat = input("Would you like to try this example again? (Y/N): ").upper().strip()
+    repeat = input("Would you like to try this example again? (Y/N): \n").upper().strip()
 
     if repeat == "Y":
         return True
