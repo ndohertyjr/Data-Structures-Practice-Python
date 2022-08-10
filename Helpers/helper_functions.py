@@ -16,3 +16,14 @@ def show_new_example():
     else:
         print("Invalid selection.  Please enter \"Y\" or \"N\"")
         show_new_example()
+
+def repeat_example():
+    repeat = input("Would you like to try this example again? (Y/N): ").upper().strip()
+
+    if repeat == "Y":
+        return True
+    elif repeat == "N":
+        return False
+    else:
+        print("Invalid selection. Try again.")
+        repeat_example()

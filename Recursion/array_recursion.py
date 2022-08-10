@@ -3,7 +3,7 @@
 Example of recursively calling a function to traverse an array
 """
 
-from Helpers.helper_functions import show_new_example
+from Helpers.helper_functions import show_new_example, repeat_example
 
 ___author___ = "Neil Doherty"
 
@@ -41,4 +41,9 @@ def start_array_recursion():
     print("ARRAY RECURSION EXAMPLE:")
     print("This example will show how the program can use recursion to traverse an array.\n")
     array_recursion(array)
-    return show_new_example()
+    repeat = repeat_example()
+
+    if repeat:
+        start_array_recursion()
+    else:
+        return show_new_example()
