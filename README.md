@@ -54,3 +54,8 @@ This is a work in progress and will continue to grow.
 
 * Recursion 
   * Traverse an array with recursion
+  * Number of characters in an array of strings
+  * Build an array of even numbers
+  * Calculate triangular number based on index
+  * Find the character in the string
+  * Find number of shortest paths
