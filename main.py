@@ -12,6 +12,8 @@ from Recursion.array_of_even_nums import start_array_of_even_nums
 from Recursion.triangular_nums import start_triangular_nums
 from Recursion.find_the_character import start_find_the_character
 from Recursion.shortest_paths import start_shortest_paths
+from Recursion.dont_exceed_100 import start_dont_exceed_100
+from Recursion.golomb_sequence import start_golomb_sequence
 
 ___author___ = "Neil Doherty"
 
@@ -23,7 +25,9 @@ menu_options = {
         "3": ["Build an array of even numbers", start_array_of_even_nums],
         "4": ["Calculate triangular number based on index", start_triangular_nums],
         "5": ["Find the character in the string", start_find_the_character],
-        "6": ["Find number of shortest paths", start_shortest_paths]
+        "6": ["Find number of shortest paths", start_shortest_paths],
+        "7": ["Add an array of numbers until it reaches 100", start_dont_exceed_100],
+        "8": ["Golomb sequence", start_golomb_sequence]
     }
 }
 
