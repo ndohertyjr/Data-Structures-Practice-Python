@@ -50,12 +50,22 @@ def get_user_input():
 # Since the first move on the path will always be either 1 row down or 1 column right,
 # the formula for determining the number of shortest paths will be recursively adding
 # the full number of columns + (rows - 1) + the full number of rows + (columns - 1)
-def get_num_shortest_paths(rows, cols):
+def get_num_shortest_paths(rows, cols, memo_rows={}, memo_cols={}):
     # Base case to return when rows or cols = 1
     if rows == 1 or cols == 1:
         return 1
 
-    return get_num_shortest_paths(rows - 1, cols) + get_num_shortest_paths(rows, cols - 1)
+    # Correct but inefficient solution:
+    # return get_num_shortest_paths(rows - 1, cols) + get_num_shortest_paths(rows, cols - 1)
+
+    # Optimized solution using memoization
+    if not rows in memo_rows:
+        memo_rows[rows] = get_num_shortest_paths(rows - 1, cols)
+
+    if not cols in memo_cols:
+        memo_cols[cols] = get_num_shortest_paths(rows, cols - 1)
+
+    return memo_rows[rows] + memo_cols[cols]
 
 
 def start_shortest_paths():
