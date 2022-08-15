@@ -2,6 +2,7 @@
 """
 Helper functions to be used throughout the program
 """
+
 ___author___ = "Neil Doherty"
 
 
@@ -29,3 +30,5 @@ def repeat_example():
             return False
         else:
             print("Invalid selection. Try again.")
+
+
