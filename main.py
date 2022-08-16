@@ -17,6 +17,7 @@ from Recursion.golomb_sequence import start_golomb_sequence
 from Sorting.product_of_three_nums import start_product_of_three_nums
 from Sorting.find_missing_number import start_find_missing_num
 from Sorting.different_iterations_of_O import start_different_interations_of_O
+from Linked_Lists.linked_list import start_linked_list
 
 ___author___ = "Neil Doherty"
 
@@ -36,6 +37,9 @@ menu_options = {
         "1": ["Find the greatest product of three numbers from an array", start_product_of_three_nums],
         "2": ["Find the missing number in an array", start_find_missing_num],
         "3": ["Different O(N) iterations of sorting", start_different_interations_of_O]
+    },
+    "linked lists": {
+        "1": ["Linked List example functions", start_linked_list]
     }
 }
 
@@ -51,8 +55,8 @@ def welcome_menu():
 def message_selection():
     category_selection = "0"
     example_selection = "0"
-    validCategory = False
-    validExample = False
+    valid_category = False
+    valid_example = False
 
     choose_new_example = True
     while choose_new_example == True:
@@ -61,15 +65,15 @@ def message_selection():
             print(" - " + category)
 
 
-        while validCategory == False:
+        while valid_category == False:
             print("Type the name of the category you would like to explore (ex. recursion).")
             category_selection = input("Selection: ").lower().strip()
             if category_selection in menu_options:
-                validCategory = True
+                valid_category = True
             else:
                 print("Invalid selection. Try again.")
 
-        while validExample == False:
+        while valid_example == False:
             print("\nEnter the number of the example you want to see.  Type \"00\" to return to category selection")
             for example in menu_options[category_selection]:
                 print(example + ". " + menu_options[category_selection][example][0])
@@ -81,7 +85,7 @@ def message_selection():
                 message_selection()
 
             if example_selection in menu_options[category_selection]:
-                validExample = True
+                valid_example = True
             else:
                 print("Invalid selection. Try again.")
 
@@ -96,8 +100,8 @@ def message_selection():
         if choose_new_example == True:
             category_selection = ""
             example_selection = ""
-            validCategory = False
-            validExample = False
+            valid_category = False
+            valid_example = False
 
 
 
